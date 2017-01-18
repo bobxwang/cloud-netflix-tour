@@ -1,0 +1,23 @@
+server:
+  port: ${PORT:8888}
+
+logging:
+  level:
+    com.netflix.discovery: "OFF"
+    org.springframework.cloud: "DEBUG"
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          searchLocations: classpath:/config
+  jackson:
+      serialization:
+        indent_output: true

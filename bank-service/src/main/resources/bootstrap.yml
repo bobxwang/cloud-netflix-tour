@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: bankservice
+  cloud:
+    config:
+      enabled: true
+      uri: http://127.0.0.1:8888  #配置服务地址
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+#      defaultZone: http://financeregistry1.51.nb:8080/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    metadataMap:
+      instanceId: ${spring.application.name}:${server.port}

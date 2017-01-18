@@ -1,0 +1,27 @@
+server:
+  port: ${PORT:9000}
+
+info:
+  build:
+    version: @project.version@
+    name: @project.artifactId@
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: true
+
+spring:
+  jackson:
+    serialization:
+      indent_output: true
+
+feign:
+  compression:
+    request:
+      enable: true
+    response:
+      enable: true

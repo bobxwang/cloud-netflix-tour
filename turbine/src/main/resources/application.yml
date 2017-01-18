@@ -1,0 +1,19 @@
+server:
+  port: ${port:9898}
+
+spring:
+  jackson:
+    serialization:
+      indent_output: true
+
+turbine:
+  aggregator:
+    clusterConfig: APIGATEWAY # 因为eureka默认返回serviceId为大写
+  appConfig: APIGATEWAY
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: true
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
