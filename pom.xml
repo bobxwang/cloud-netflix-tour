@@ -35,11 +35,12 @@
         <artifactId>spring-cloud-starter-parent</artifactId>
         <!--<version>Angel.SR6</version>-->
         <version>Brixton.SR1</version>
+        <!--<version>Camden.SR4</version>-->
     </parent>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.7</java.version>
+        <java.version>1.8</java.version>
     </properties>
 
     <dependencyManagement>
